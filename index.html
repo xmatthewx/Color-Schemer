@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="utf-8">
+  <title>Schemer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/slider.css" rel="stylesheet">
+  <link href="css/schemer.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="app" >
+    <header>
+      <h1>Color Schemer</h1>
+    </header>
+
+
+    <section id="palette">
+      <div id="swatches">
+        <div class="swatch color0 draggable"><span></span></div>
+        <div class="swatch color1 draggable"><span></span></div>
+        <div class="swatch color2 draggable"><span></span></div>
+        <div class="swatch color3 draggable"><span></span></div>
+      </div>
+    </section>
+
+    <section id="variation-selector">
+      <div>
+        <button data-schemeVariation="default" >Default</button>
+        <button data-schemeVariation="pastel" class="active">Pastel</button>
+        <button data-schemeVariation="soft" >Soft</button>
+        <button data-schemeVariation="light" >Light</button>
+        <button data-schemeVariation="hard" >Hard</button>
+        <button data-schemeVariation="pale" >Pale</button>
+      </div>
+    </section>
+
+    <section>
+      <div id="scheme-selector">
+        <button data-schemeType="monochromatic" >Monochrome</button>
+        <button data-schemeType="contrast" >Contrast</button>
+        <button data-schemeType="triade" class="active">Triade</button>
+        <button data-schemeType="tetrade" >Tetrade</button>
+        <button data-schemeType="analogic" >Analogic</button>
+      </div>      
+      <div style="display:none">
+        <label for="add-complement"><input type="checkbox" id="add-complement" name="add-complement" style="margin:.25em;"  >Add Complement</label>
+      </div>
+    </section>
+
+    <section id="distance-selector" style="display:none;">
+      <input id="distance-slider" type="range" min="0" max="1" value="0.5" step="0.01" >
+      <div style="display:none">Distance <span id="distance-value">0.5</span></div>
+      <a style="margin-left:10px;" href="#" title="Won't affect Scheme M or C." >(?)</a>
+    </section>
+
+    <section>
+        <div id="hue-selector" >
+          <span id="hue-sample" class="swatch"></span>
+          <input id="hue-slider" type="range" min="0" max="360" value="120">
+        </div>
+    </section>
+
+    <section id="demo">
+      <div class="color0 shape0 draggable"></div>
+      <div class="color1 shape1 draggable"></div>
+      <div class="color2 shape2 draggable"></div>
+      <div class="color3 shape3 draggable">hello!</div>
+      <button class="shuffle">shuffle</button>
+      <p class="helper">drag shapes to explore</p>
+    </section>
+
+
+  </div>
+  <script src="lib/jquery-2.1.0.min.js"></script>
+  <script src="lib/color-scheme.min.js"></script>
+  <script src="lib/draggabilly.min.js"></script>
+  <script src="js/schemer.js"></script>
+</body>

@@ -1,0 +1,175 @@
+
+body {
+  font-family: "Fira Sans", "Open Sans", sans-serif;
+  color:#ccc;
+  background:black;
+  margin:0; padding:0;
+}
+
+#app {
+  max-width:600px;
+  background:#333;
+  margin:1em auto;
+  height:100%;
+  padding:1em 0 2em;
+  border-radius: 10px;
+}
+
+header {
+  margin:0 0 2em; 
+  padding:.5em .25em 0;
+  text-align: center;
+  background:#393939;
+  border:1px solid #555;
+  border-width: 1px 0;
+}
+
+h1 { 
+  margin:0; padding:0; 
+  font-style: italic;
+  color:#aaa;
+}
+
+
+section {
+  margin:1em 0 2em;
+  text-align: center;
+}
+
+#swatches {
+  padding:2em 0;
+}
+
+.swatch {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin: 5px;
+  border: 0px solid #fff;
+  background:#999;
+  text-align:center;
+  color:rgba(0,0,0,0.3);
+  border-radius: 5%;
+}
+.draggable {
+  cursor:move;
+}
+
+.swatch span {
+  display: block;
+  margin:38% auto 0;
+}
+
+button {
+  background:#444;
+  padding:.25em .5em;
+  color:#ccc;
+  border: 0;
+  box-shadow:none;
+  outline:0;
+  font-size:1.2em;
+  border-radius:2px;
+}
+
+button:hover, button.active {
+  cursor:pointer;
+  border:0;
+  background:#777;
+}
+
+.ui-slider-horizontal {
+  margin-left:0 !important; 
+}
+
+
+.draggable.is-pointer-down {
+}
+.draggable.is-dragging { opacity: 0.7; }
+
+
+#hue-selector {
+
+}
+
+#hue-slider {
+  position:relative;
+  width:380px;
+  top:-1.25em;
+}
+
+#distance-slider {
+  width:200px;
+}
+
+
+#hue-sample {
+  height: 40px; width: 40px;
+  margin:0 1em;
+  background:#eee;
+}
+
+
+#demo  { 
+  position:relative; 
+  height:200px; 
+  margin:2em; 
+    background:#393939;
+  border:1px dashed #555;
+
+}
+#demo div  { 
+  display: inline-block; position: absolute; 
+  font-weight: 900;
+  font-size: 1.25em;
+  text-align:center;
+  font-style: italic;
+}
+
+
+#demo .shuffle {
+  position: absolute;
+  top:5px;
+  right: 5px;
+  border:0;
+  box-shadow: none;
+  z-index:101;
+}
+
+.shape0 {
+  left:50%; top:50%; 
+  margin:-50px 0 0 -50px;
+  height: 100px; width: 100px;
+  transform: rotate(45deg); 
+  z-index:10;
+}
+.shape1 {
+  left:50%; top:50%;
+  margin:-40px 0 0 -40px;
+  height: 80px; width: 80px;
+  border-radius:50%;
+  z-index:11;
+}
+.shape2 {
+  left:50%; top:50%;
+  margin:20px 0 0 -60px;
+  height: 30px; width: 120px;
+  z-index:12;
+}
+.shape3 {
+  left:50%; top:50%;
+  margin:22px 0 0 -75px;
+  height: 30px; width: 150px;
+  background:transparent !important;
+  z-index:13;
+}
+
+#demo .helper {
+  position: absolute;
+  bottom:0; right:4px;
+  text-align:right;
+  margin:0; padding:0;
+  font-size:.6em;
+  text-transform: uppercase;
+  font-weight: 100;
+  opactiy:.4;
+}
