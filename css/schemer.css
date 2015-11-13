@@ -80,10 +80,9 @@ button:hover, button.active {
 
 /* Sliders */
 
-.ui-slider-horizontal {
-  margin-left:0 !important; 
-}
-
+input[type=range]::-moz-focus-outer {
+    border: 0;
+    }
 
 /* Draggables */
 
@@ -101,7 +100,8 @@ button:hover, button.active {
 #hue-slider {
   position:relative;
   width:380px;
-  top:-1.25em;
+  vertical-align: top;
+  top:.25em;
 }
 
 #hue-sample {
