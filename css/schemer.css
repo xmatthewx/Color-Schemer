@@ -9,7 +9,7 @@ body {
 /* Layout */
 
 #app {
-  max-width:600px;
+  max-width:500px;
   background:#333;
   margin:1em auto;
   height:100%;
@@ -33,19 +33,20 @@ h1 {
 }
 
 section {
-  margin:1em 0 2em;
+  margin:1em 1em 2em;
   text-align: center;
 }
 
 /* Swatches */
 
 #swatches {
-  padding:2em 0;
+  display: flex;
 }
 
 .swatch {
   height: 100px;
   width: 100px;
+  position: relative;
   display: inline-block;
   margin: 5px;
   border: 0px solid #fff;
@@ -53,12 +54,18 @@ section {
   text-align:center;
   color:rgba(0,0,0,0.3);
   border-radius: 5%;
+  flex:1;
+  overflow: hidden;
 }
 
 .swatch span {
   display: block;
-  margin:38% auto 0;
+  position: relative;
+  margin:-.75em auto 0;
+  top:50%;
 }
+
+
 
 /* Buttons */
 
@@ -71,12 +78,31 @@ button {
   outline:0;
   font-size:1.2em;
   border-radius:2px;
+  margin:.1em;
 }
 
 button:hover, button.active {
   cursor:pointer;
   background:#777;
 }
+
+/* Selectors */
+
+.selector {
+  display: flex;
+  flex-wrap: wrap;
+
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.selector button {
+  flex:1 1 auto;
+  overflow: hidden;
+  min-width: 60px;
+  max-width: 150px;
+}
+
 
 /* Sliders */
 
@@ -102,12 +128,15 @@ input[type=range]::-moz-focus-outer {
   width:380px;
   vertical-align: top;
   top:.25em;
+  flex:2;
+  background: transparent;
 }
 
 #hue-sample {
   height: 40px; width: 40px;
-  margin:0 1em;
+  margin:0 1em 0 0;
   background:#eee;
+  flex:none;
 }
 
 #distance-slider {
@@ -120,12 +149,12 @@ input[type=range]::-moz-focus-outer {
 #demo  { 
   position:relative; 
   height:200px; 
-  margin:2em; 
-    background:#393939;
+  margin:2em 1em; 
+  background:#393939;
   border:1px dashed #555;
 
 }
-#demo div  { 
+#demo div  { /* see shapes below */
   display: inline-block; position: absolute; 
   font-weight: 900;
   font-size: 1.25em;

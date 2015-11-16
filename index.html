@@ -17,27 +17,25 @@
 
     <section id="palette">
       <div id="swatches">
-        <div class="swatch color0 draggable"><span></span></div>
-        <div class="swatch color1 draggable"><span></span></div>
-        <div class="swatch color2 draggable"><span></span></div>
-        <div class="swatch color3 draggable"><span></span></div>
+        <div class="swatch color0"><span></span></div>
+        <div class="swatch color1"><span></span></div>
+        <div class="swatch color2"><span></span></div>
+        <div class="swatch color3"><span></span></div>
       </div>
     </section>
 
-    <section id="variation-selector">
-      <div>
+    <section id="variation-selector" class="selector">
         <button data-schemeVariation="default" >Default</button>
         <button data-schemeVariation="pastel" class="active">Pastel</button>
         <button data-schemeVariation="soft" >Soft</button>
         <button data-schemeVariation="light" >Light</button>
         <button data-schemeVariation="hard" >Hard</button>
         <button data-schemeVariation="pale" >Pale</button>
-      </div>
     </section>
 
     <section>
-      <div id="scheme-selector">
-        <button data-schemeType="monochromatic" >Monochrome</button>
+      <div id="scheme-selector"  class="selector">
+        <button data-schemeType="monochromatic" >Mono</button>
         <button data-schemeType="contrast" >Contrast</button>
         <button data-schemeType="triade" class="active">Triade</button>
         <button data-schemeType="tetrade" >Tetrade</button>
@@ -55,7 +53,7 @@
     </section>
 
     <section>
-        <div id="hue-selector" >
+        <div id="hue-selector"  class="selector">
           <span id="hue-sample" class="swatch"></span>
           <input id="hue-slider" type="range" min="0" max="360" value="120">
         </div>
