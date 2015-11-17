@@ -72,7 +72,6 @@ section {
 }
 
 
-
 /* Buttons */
 
 button {
@@ -231,4 +230,21 @@ input[type=range]::-moz-focus-outer {
   bottom:-1.5em;
   right:1em;
   display: none; /* shown only when flash is available */
+}
+
+
+/* Small screens */
+
+@media screen and (max-width: 480px) {
+    #app {
+      margin:0;
+      padding: 0 0 1em;
+      border-radius: 0;
+    }
+    #palette {
+      margin-bottom: 2em;
+    }
+    .swatch {
+        height: 75px;
+    }
 }
