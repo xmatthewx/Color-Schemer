@@ -13,14 +13,18 @@ function generateColors() {
 function displayPalette (colors){
   for (var i in colors) {
     var c = '#' + colors[i];
+    var elem = $('.color' + i); 
+    $('.copied').removeClass('copied');
 
-    // apply color
-    $('.color' + i).css('background-color', c);
-    $('#demo .color' + i).css('color', c);
+    // apply color to swatch and demo
+    elem.css('background-color', c);
+    $('#demo .color' + i).css('color', c); // demo text
 
     // label swatch
-    $('.color' + i + ' span').html(c);
+    elem.find('span').html(c);
 
+    // prep tap to copy hex
+    $('#palette .color' + i).attr('data-clipboard-text',c);
   }
 }
 
@@ -244,7 +248,16 @@ $(document).ready(function(){
     top += 1; 
   })
 
+  // tap to copy to clipboard
 
+  var client = new ZeroClipboard($('.copy'));
+
+  client.on( 'ready', function( readyEvent ) {
+
+    client.on( 'aftercopy', function( event ) {
+      event.target.classList.add('copied');
+    });
+  });
 
   // initial colors
 

@@ -35,9 +35,14 @@ h1 {
 section {
   margin:1em 1em 2em;
   text-align: center;
+  position: relative;
 }
 
 /* Swatches */
+
+#palette {
+  margin-bottom: 3em;
+}
 
 #swatches {
   display: flex;
@@ -56,6 +61,7 @@ section {
   border-radius: 5%;
   flex:1;
   overflow: hidden;
+  cursor:pointer;
 }
 
 .swatch span {
@@ -119,7 +125,12 @@ input[type=range]::-moz-focus-outer {
 .draggable.is-pointer-down { }
 .draggable.is-dragging { opacity: 0.7; }
 
+/* Copy to clipboard */
 
+.copied {
+      transform: rotate(360deg);
+      transition: transform 1s;
+}
 
 /* Hue Selector */
 
@@ -172,16 +183,6 @@ input[type=range]::-moz-focus-outer {
   background:#444;
 }
 
-#demo .helper {
-  position: absolute;
-  bottom:0; right:4px;
-  text-align:right;
-  margin:0; padding:0;
-  font-size:.6em;
-  text-transform: uppercase;
-  font-weight: 100;
-  opactiy:.4;
-}
 
 /* Demo shapes  */
 
@@ -213,4 +214,20 @@ input[type=range]::-moz-focus-outer {
   z-index:13;
 }
 
+/* Help tips */
 
+.helper {
+  position: absolute;
+  bottom:0; right:4px;
+  text-align:right;
+  margin:0; padding:0;
+  font-size:.6em;
+  text-transform: uppercase;
+  font-weight: 100;
+  opactiy:.4;
+}
+
+#palette .helper {
+  bottom:-1.5em;
+  right:1em;
+}
