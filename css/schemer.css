@@ -226,6 +226,11 @@ input[type=range]::-moz-focus-outer {
   opactiy:.4;
 }
 
+.helper a {
+  color:inherit;
+  outline: none;
+}
+
 #palette .helper {
   bottom:-1.5em;
   right:1em;

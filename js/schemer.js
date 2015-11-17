@@ -11,6 +11,7 @@ function generateColors() {
 
 
 function displayPalette (colors){
+  var allHex = '';
   for (var i in colors) {
     var c = '#' + colors[i];
     var elem = $('.color' + i); 
@@ -23,9 +24,11 @@ function displayPalette (colors){
     // label swatch
     elem.find('span').html(c);
 
-    // prep tap to copy hex
+    // prep tap-to-copy hex
     $('#palette .color' + i).attr('data-clipboard-text',c);
+    allHex += c + '\n';
   }
+    $('#copy-all').attr('data-clipboard-text',allHex)
 }
 
 
