@@ -230,4 +230,5 @@ input[type=range]::-moz-focus-outer {
 #palette .helper {
   bottom:-1.5em;
   right:1em;
+  display: none; /* shown only when flash is available */
 }

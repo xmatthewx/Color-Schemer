@@ -253,7 +253,7 @@ $(document).ready(function(){
   var client = new ZeroClipboard($('.copy'));
 
   client.on( 'ready', function( readyEvent ) {
-
+    $('#palette .helper').show();
     client.on( 'aftercopy', function( event ) {
       event.target.classList.add('copied');
     });
